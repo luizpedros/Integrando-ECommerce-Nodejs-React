@@ -1,3 +1,6 @@
+//"useState" permite que a gente manipule o estado estado da aplicação (chamar sempre dentro do array)
+//Redux trabalha com estado geral
+//"useEffect" permite agente a trabalhar com  funções assincronas na aplicação.
 import { useState, useEffect } from 'react';
 import { Grid, Button, TextField } from '@material-ui/core/';
 
