@@ -31,13 +31,13 @@ const Contatos = () => {
         }
 
         fetch(url, {
-            method: "POST",
+            method: "POST",//metodo que esta usando
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(bodyForm)
+            body: JSON.stringify(bodyForm)// vai envia um json para o back-end
         })
-        .then((response) => response.json())
+        .then((response) => response.json())//validar se recebeu uma respota do servidor depois do fetch
         .then((data) => {
             if(data.id) {
                 setRender(true);
