@@ -10,7 +10,7 @@ const Contatos = () => {
     const [message, setMessage] = useState([]);
     const [author, setAuthor] = useState('');
     const [content, setContent] = useState('');
-    const [validator, setValidator] = useState(false);
+    const [validator, setValidator] = useState(false);//vaalidando o formulario
     const [render, setRender] = useState(false);
     const [success, setSuccess] = useState(false);
 
@@ -60,22 +60,22 @@ const Contatos = () => {
                 <TextField id="name" label="Name" value={author} onChange={(event)=>{setAuthor(event.target.value)}} fullWidth/>
                 <TextField id="message" label="Message" value={content} onChange={(event)=>{setContent(event.target.value)}} fullWidth/>
             </Grid>
-
+            
             {validator && 
                 <div className="alert alert-warning alert-dismissible fade show mt-2" role="alert">
-                    <strong>Por favor preencha todos os campos!</strong>
+                    <strong>Campo em branco!</strong>
                     <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             }
 
             {success && 
                 <div className="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                    <strong>Mensagem foi enviada</strong>
+                    <strong>Mensagem foi publicada</strong>
                 </div>
             }
 
             <Button onClick={sendMessage} className="mt-2" variant="contained" color="primary">
-                Sent
+                Comentar
             </Button>
 
             {message.map((content) => {
